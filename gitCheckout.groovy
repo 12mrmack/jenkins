@@ -1,6 +1,5 @@
 def call(string branch,string gitUrl){
 	stage('Checkout Code') {
-            steps {
                 checkout scmGit(
                     branches: [[name: '${branch}']],
                     extensions: [],
@@ -10,5 +9,4 @@ def call(string branch,string gitUrl){
                 )
                 echo 'Repository Checkout Successful'
             }
-        }
 }
